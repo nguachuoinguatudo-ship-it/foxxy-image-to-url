@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #05060b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: #e2e8f0;
+  font-family: var(--font-space), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #05060b;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #164e63, #4c1d95);
+  border-radius: 99px;
+  border: 2px solid #05060b;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #22d3ee, #a78bfa);
+}
+
+@layer components {
+  .glass {
+    background: rgba(13, 16, 28, 0.62);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(100deg, #22d3ee 0%, #a78bfa 45%, #f472b6 90%);
+  }
+
+  .text-gradient-animated {
+    @apply bg-clip-text text-transparent animate-gradient-x;
+    background-image: linear-gradient(100deg, #22d3ee, #a78bfa, #f472b6, #22d3ee);
+    background-size: 300% 100%;
+  }
+
+  .border-gradient {
+    position: relative;
+    background:
+      linear-gradient(#0b0d16, #0b0d16) padding-box,
+      linear-gradient(120deg, rgba(34, 211, 238, 0.6), rgba(167, 139, 250, 0.6), rgba(244, 114, 182, 0.5)) border-box;
+    border: 1px solid transparent;
+  }
+
+  .grid-overlay {
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .noise-overlay::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    z-index: 5;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .btn-primary {
+    @apply relative overflow-hidden rounded-2xl px-6 py-3.5 font-display font-semibold text-[#04121a] transition-all duration-300;
+    background: linear-gradient(110deg, #22d3ee, #67e8f9 40%, #a78bfa);
+    background-size: 200% 100%;
+  }
+  .btn-primary:hover {
+    background-position: 100% 0;
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.45);
+    transform: translateY(-2px);
+  }
+  .btn-primary:active {
+    transform: translateY(0) scale(0.98);
+  }
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .btn-ghost {
+    @apply rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 font-display font-semibold text-slate-200 transition-all duration-300;
+  }
+  .btn-ghost:hover {
+    @apply border-cyan-400/40 text-cyan-200;
+    box-shadow: 0 0 24px rgba(34, 211, 238, 0.15);
+    transform: translateY(-2px);
+  }
+  .btn-ghost:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .terminal-window {
+    @apply rounded-2xl border border-white/10 bg-[#080a12]/90 backdrop-blur-xl;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  .card-hover:hover {
+    @apply -translate-y-1.5 border-cyan-400/30;
+    box-shadow: 0 18px 50px rgba(34, 211, 238, 0.12);
+  }
+
+  .input-copy {
+    @apply w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 font-mono text-sm text-cyan-100 outline-none transition-colors;
+  }
+  .input-copy:focus {
+    @apply border-cyan-400/50;
+    box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12);
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl;
+  }
+}
