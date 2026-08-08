@@ -8,7 +8,6 @@ Modern UI, full animasi, boot terminal, responsive mobile & desktop. Dibuat oleh
 - ⚡ Upload instan → URL siap bagikan (PNG / JPG / JPEG / GIF / WEBP / AVIF, maks 4.5 MB)
 - 🖥️ Boot terminal cinematic di kunjungan pertama (bisa di-replay via tombol reboot)
 - ✨ Full animasi: Framer Motion + Tailwind (aurora, twinkle stars, marquee, page transitions)
-- 🖼️ Halaman Gallery: list, copy link, buka tab baru, hapus, pagination
 - 📚 Halaman Docs API + halaman About developer
 - 🎯 URL langsung di domain sendiri: `foxxy-free-imghosting.vercel.app/foxxy-xxxx.png` (proxy via catch-all route)
 - 📦 Storage: Vercel Blob (gratis 5 GB) + CDN cache 1 tahun
@@ -18,7 +17,6 @@ Modern UI, full animasi, boot terminal, responsive mobile & desktop. Dibuat oleh
 | Route | Keterangan |
 | --- | --- |
 | `/` | Home — boot terminal, hero, uploader, fitur, cara pakai |
-| `/gallery` | Gallery semua file terupload |
 | `/docs` | Dokumentasi API & format URL |
 | `/about` | Profil developer (Wanz) |
 | `/:file.png` | Proxy gambar langsung (di luar halaman di atas) |
@@ -31,7 +29,7 @@ Modern UI, full animasi, boot terminal, responsive mobile & desktop. Dibuat oleh
    - Upload dari halaman utama → copy URL
    - Contoh hasil: `https://foxxy-free-imghosting.vercel.app/foxxy-kodeacak.png`
 
-> Tanpa Blob Store, halaman upload/gallery akan menampilkan pesan error konfigurasi yang jelas.
+> Tanpa Blob Store, halaman upload akan menampilkan pesan error konfigurasi yang jelas.
 
 ### Cek token (opsional)
 
@@ -54,8 +52,6 @@ Buat `.env.local` berisi token Blob Store kamu (lihat `.env.example`).
 | Method | Endpoint | Deskripsi |
 | --- | --- | --- |
 | POST | `/api/upload` | Multipart form, field `file`. Balasan: `{ url, pathname, direct, size, type }` |
-| GET | `/api/images?limit=&cursor=` | List blob (mode folded, prefix `foxxy-`) |
-| DELETE | `/api/images?path=foxxy-xxx.png` | Hapus blob |
 | GET | `/foxxy-xxx.png` | Serve gambar (auto content-type + cache immutable 1 tahun) |
 
 ## Struktur
@@ -63,9 +59,8 @@ Buat `.env.local` berisi token Blob Store kamu (lihat `.env.example`).
 ```
 app/
   page.tsx              # Home
-  gallery/  docs/  about/   # Pages
-  api/upload/           # POST upload → Vercel Blob
-  api/images/           # GET list + DELETE
+  docs/  about/   # Pages
+  api/upload/           # POST upload → blob storage
   [...slug]/route.ts    # Proxy gambar di domain sendiri
 components/
   AppShell.tsx          # Boot overlay, navbar, footer, page transition

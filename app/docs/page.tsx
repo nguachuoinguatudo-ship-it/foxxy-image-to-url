@@ -13,16 +13,6 @@ const ENDPOINTS = [
   },
   {
     method: "GET",
-    path: "/api/images",
-    desc: "List semua blob (param: limit, cursor). Untuk halaman gallery.",
-  },
-  {
-    method: "DELETE",
-    path: "/api/images?path=...",
-    desc: "Hapus blob berdasarkan pathname.",
-  },
-  {
-    method: "GET",
     path: "/:nama-file.png",
     desc: "Proxy gambar langsung — ini URL yang kamu bagikan. Auto content-type + cache 1 tahun.",
   },

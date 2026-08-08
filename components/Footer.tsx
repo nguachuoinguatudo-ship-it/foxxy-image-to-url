@@ -35,7 +35,6 @@ export default function Footer({ onReboot }: { onReboot?: () => void }) {
             <ul className="mt-4 space-y-2.5 text-sm text-slate-400">
               {[
                 ["Home", "/"],
-                ["Gallery", "/gallery"],
                 ["Docs", "/docs"],
                 ["About", "/about"],
               ].map(([label, href]) => (

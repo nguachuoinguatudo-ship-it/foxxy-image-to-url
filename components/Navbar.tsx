@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { Home, Images, BookOpen, User, Menu, X, Zap, TerminalSquare } from "lucide-react";
+import { Home, BookOpen, User, Menu, X, Zap, TerminalSquare } from "lucide-react";
 
 const LINKS = [
   { href: "/", label: "Home", icon: Home },
-  { href: "/gallery", label: "Gallery", icon: Images },
   { href: "/docs", label: "Docs", icon: BookOpen },
   { href: "/about", label: "About", icon: User },
 ];

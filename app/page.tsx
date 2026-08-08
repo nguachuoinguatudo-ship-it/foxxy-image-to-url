@@ -10,7 +10,7 @@ import {
   Rocket,
   Terminal,
   ArrowDown,
-  Images,
+  BookOpen,
   Copy,
   Share2,
 } from "lucide-react";
@@ -113,8 +113,8 @@ export default function HomePage() {
           <Link href="#upload" className="btn-primary flex items-center justify-center gap-2">
             <Zap size={17} fill="currentColor" /> Upload Sekarang
           </Link>
-          <Link href="/gallery" className="btn-ghost flex items-center justify-center gap-2">
-            <Images size={17} /> Lihat Gallery
+          <Link href="/docs" className="btn-ghost flex items-center justify-center gap-2">
+            <BookOpen size={17} /> Lihat Docs
           </Link>
         </motion.div>
 
