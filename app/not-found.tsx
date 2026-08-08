@@ -7,7 +7,7 @@ export default function NotFound() {
       <div className="terminal-window w-full max-w-md p-6 text-left font-mono text-sm">
         <p className="text-rose-400">$ foxxy get "file-not-found"</p>
         <p className="mt-2 text-slate-200">ERROR 404 — file tidak ditemukan</p>
-        <p className="mt-1 text-slate-500">blob: null • status: missing</p>
+        <p className="mt-1 text-slate-500">storage: null • status: missing</p>
         <p className="animate-blink mt-2 inline-block text-cyan-400">▌</p>
       </div>
       <h1 className="mt-8 font-display text-5xl font-bold sm:text-6xl">

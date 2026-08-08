@@ -19,7 +19,7 @@ export default function Footer({ onReboot }: { onReboot?: () => void }) {
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
               Image to URL instantly. Upload once, share anywhere — powered by Wanz,
-              blob storage with edge-fast CDN caching.
+              cloud storage with edge-fast CDN caching.
             </p>
             <button
               type="button"

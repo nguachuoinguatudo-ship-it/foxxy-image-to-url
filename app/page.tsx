@@ -59,11 +59,11 @@ const FEATURES = [
 
 const STEPS = [
   { icon: Images, title: "Pilih gambar", desc: "Tarik & lepas, atau klik dropzone. PNG, JPG, GIF, WebP & AVIF, maks 4.5 MB." },
-  { icon: Rocket, title: "Upload", desc: "File disimpan ke blob storage dengan nama acak aman: foxxy-xxxx.png." },
+  { icon: Rocket, title: "Upload", desc: "File disimpan ke cloud storage dengan nama acak aman: foxxy-xxxx.png." },
   { icon: Share2, title: "Sebarkan URL", desc: "Salin URL langsung, markdown, atau HTML — buka di mana saja." },
 ];
 
-const FORMATS = ["png", "jpg", "jpeg", "gif", "webp", "avif", "cdn", "blob", "edge", "fast"];
+const FORMATS = ["png", "jpg", "jpeg", "gif", "webp", "avif", "cdn", "edge", "fast"];
 
 export default function HomePage() {
   return (

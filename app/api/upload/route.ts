@@ -60,11 +60,12 @@ export async function POST(req: NextRequest) {
     const message = err instanceof Error ? err.message : String(err);
     if (message.includes("BLOB_READ_WRITE_TOKEN")) {
       return NextResponse.json(
-        { error: "Blob storage belum dikonfigurasi. Set env BLOB_READ_WRITE_TOKEN lalu deploy ulang." },
+        { error: "Penyimpanan cloud belum dikonfigurasi. Set token env lalu deploy ulang." },
         { status: 500 }
       );
     }
     console.error("[upload]", err);
-    return NextResponse.json({ error: "Upload gagal di server. Coba lagi." }, { status: 500 });
+    const short = message.length > 160 ? `${message.slice(0, 160)}...` : message;
+    return NextResponse.json({ error: `Upload gagal: ${short}` }, { status: 500 });
   }
 }
