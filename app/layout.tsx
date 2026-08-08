@@ -3,6 +3,8 @@ import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ToastProvider } from "@/components/ToastProvider";
 import AppShell from "@/components/AppShell";
+import MaintenanceScreen from "@/components/MaintenanceScreen";
+import { head } from "@vercel/blob";
 
 const space = Space_Grotesk({
   subsets: ["latin"],
@@ -15,6 +17,8 @@ const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains",
   display: "swap",
 });
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "FOXXY — Image to URL instantly",
@@ -37,17 +41,25 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const maintenance = await head("foxxy-maintenance.flag")
+    .then(() => true)
+    .catch(() => false);
+
   return (
     <html lang="en" className={`${space.variable} ${jetbrains.variable}`}>
       <body className="noise-overlay min-h-screen antialiased">
-        <ToastProvider>
-          <AppShell>{children}</AppShell>
-        </ToastProvider>
+        {maintenance ? (
+          <MaintenanceScreen />
+        ) : (
+          <ToastProvider>
+            <AppShell>{children}</AppShell>
+          </ToastProvider>
+        )}
       </body>
     </html>
   );
