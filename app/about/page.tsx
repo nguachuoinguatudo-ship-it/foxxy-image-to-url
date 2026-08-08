@@ -7,12 +7,12 @@ export const metadata: Metadata = { title: "About — FOXXY Image to URL" };
 
 const STACK = [
   { icon: Code2, name: "Next.js 14", role: "App Router + Serverless API" },
-  { icon: Database, name: "Vercel Blob", role: "Storage & CDN caching" },
+  { icon: Database, name: "Blob Storage", role: "Penyimpanan & CDN caching" },
   { icon: Palette, name: "Tailwind + Framer Motion", role: "UI/UX & animasi" },
   { icon: Server, name: "Edge Proxy", role: "Serving gambar di domain sendiri" },
 ];
 
-const SKILLS = ["TypeScript", "Next.js", "Tailwind", "Node.js", "UI/UX Design", "Motion Design", "Vercel", "REST API"];
+const SKILLS = ["TypeScript", "Next.js", "Tailwind", "Node.js", "UI/UX Design", "Motion Design", "Edge CDN", "REST API"];
 
 export default function AboutPage() {
   return (

@@ -146,7 +146,7 @@ export default function DocsPage() {
             <p className="text-sm font-semibold text-white">File</p>
             <ul className="mt-3 list-inside list-disc space-y-1.5 text-sm text-slate-400">
               <li>png, jpg, jpeg, gif, webp, avif</li>
-              <li>maks 4.5 MB (free tier Vercel Blob)</li>
+              <li>maks 4.5 MB (batas penyimpanan gratis)</li>
               <li>SVG diblokir (alasan keamanan XSS)</li>
             </ul>
           </div>
@@ -155,7 +155,7 @@ export default function DocsPage() {
             <ul className="mt-3 list-inside list-disc space-y-1.5 text-sm text-slate-400">
               <li>Gratis hingga 5 GB penyimpanan</li>
               <li>Bandwidth: 5 GB/bulan (hobby)</li>
-              <li>Upgrade plan kapan saja di dashboard Vercel</li>
+              <li>Upgrade kapasitas kapan saja kalau butuh</li>
             </ul>
           </div>
         </div>

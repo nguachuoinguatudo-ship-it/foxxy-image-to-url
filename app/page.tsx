@@ -21,13 +21,13 @@ const FEATURES = [
   {
     icon: Zap,
     title: "Instan & Ringan",
-    desc: "File langsung di-stream ke Vercel Blob. URL siap dipakai < 1 detik setelah upload.",
+    desc: "File langsung di-stream ke penyimpanan cloud. URL siap dipakai < 1 detik setelah upload.",
     color: "from-cyan-400/20 to-cyan-400/0 text-cyan-300 border-cyan-400/25",
   },
   {
     icon: InfinityIcon,
     title: "Cache CDN 1 Tahun",
-    desc: "Setiap file di-cache di edge Vercel. Gambar dimuat kilat dari lokasi terdekat.",
+    desc: "Setiap file di-cache di edge network. Gambar dimuat kilat dari lokasi terdekat.",
     color: "from-violet-400/20 to-violet-400/0 text-violet-300 border-violet-400/25",
   },
   {
@@ -51,14 +51,14 @@ const FEATURES = [
   {
     icon: Rocket,
     title: "Deploy Gratis",
-    desc: "Satu klik deploy ke Vercel. Storage Blob gratis dengan limit 4.5 MB per file.",
+    desc: "Deploy sekali, langsung jalan. Storage gratis dengan limit 4.5 MB per file.",
     color: "from-sky-400/20 to-sky-400/0 text-sky-300 border-sky-400/25",
   },
 ];
 
 const STEPS = [
   { icon: Images, title: "Pilih gambar", desc: "Tarik & lepas, atau klik dropzone. PNG, JPG, GIF, WebP & AVIF, maks 4.5 MB." },
-  { icon: Rocket, title: "Upload", desc: "File disimpan ke Vercel Blob dengan nama acak aman: foxxy-xxxx.png." },
+  { icon: Rocket, title: "Upload", desc: "File disimpan ke blob storage dengan nama acak aman: foxxy-xxxx.png." },
   { icon: Share2, title: "Sebarkan URL", desc: "Salin URL langsung, markdown, atau HTML — buka di mana saja." },
 ];
 
@@ -79,7 +79,7 @@ export default function HomePage() {
             <span className="absolute h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
             <span className="h-2 w-2 rounded-full bg-emerald-400" />
           </span>
-          system online — powered by vercel blob
+          system online — powered by wanz
         </motion.div>
 
         <motion.h1
@@ -101,7 +101,7 @@ export default function HomePage() {
         >
           Upload gambar, dapatkan URL yang bisa langsung dibagikan dalam hitungan detik.
           Cepat, aman, dan gratis — bertenaga{" "}
-          <span className="font-semibold text-cyan-300">Vercel Blob</span> + CDN.
+          <span className="font-semibold text-cyan-300">Wanz Cloud</span> + CDN.
         </motion.p>
 
         <motion.div

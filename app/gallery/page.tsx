@@ -81,7 +81,7 @@ export default function GalleryPage() {
           Gallery <span className="text-gradient">Gambar</span>
         </h1>
         <p className="mx-auto mt-3 max-w-md text-sm text-slate-400">
-          Semua file yang sudah kamu upload, tersimpan di Vercel Blob.
+          Semua file yang sudah kamu upload, tersimpan di blob storage.
         </p>
       </Reveal>
 

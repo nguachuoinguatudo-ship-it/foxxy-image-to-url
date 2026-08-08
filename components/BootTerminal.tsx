@@ -7,7 +7,7 @@ import { Zap } from "lucide-react";
 const BOOT_LINES: { text: string; status?: "OK" | "WARN"; type?: "cmd" | "info" }[] = [
   { text: "FOXXY IMAGE HOST v2.0.0 — boot sequence started", type: "cmd" },
   { text: "> loading kernel .................. ", status: "OK" },
-  { text: "> mounting storage [vercel-blob] .. ", status: "OK" },
+  { text: "> mounting storage [wanz-blob] .... ", status: "OK" },
   { text: "> initializing ui engine .......... ", status: "OK" },
   { text: "> compiling animations ............ ", status: "OK" },
   { text: "> warming cdn cache ............... ", status: "OK" },

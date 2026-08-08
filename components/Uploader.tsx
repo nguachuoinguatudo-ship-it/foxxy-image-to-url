@@ -55,7 +55,7 @@ export default function Uploader() {
       return;
     }
     if (f.size > MAX_SIZE) {
-      setError("Ukuran maksimal 4.5 MB (batas free tier Vercel Blob).");
+      setError("Ukuran maksimal 4.5 MB (batas penyimpanan gratis).");
       toast("File terlalu besar (maks 4.5 MB)", "error");
       return;
     }

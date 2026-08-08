@@ -19,13 +19,13 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "FOXXY — Image to URL instantly",
   description:
-    "Upload an image, get a shareable URL in seconds. Powered by Vercel Blob storage with CDN caching. Crafted by Wanz.",
-  keywords: ["image to url", "image host", "upload image", "vercel blob", "foxxy"],
+    "Upload an image, get a shareable URL in seconds. Powered by Wanz Cloud. Crafted by Wanz.",
+  keywords: ["image to url", "image host", "upload image", "image hosting", "foxxy"],
   authors: [{ name: "Wanz" }],
   openGraph: {
     title: "FOXXY — Image to URL instantly",
     description:
-      "Upload an image, get a shareable URL in seconds. Powered by Vercel Blob storage.",
+      "Upload an image, get a shareable URL in seconds. Powered by Wanz Cloud.",
     type: "website",
   },
   icons: { icon: "/favicon.svg" },

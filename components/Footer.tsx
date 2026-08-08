@@ -18,8 +18,8 @@ export default function Footer({ onReboot }: { onReboot?: () => void }) {
               <span className="font-display text-lg font-bold text-white">FOXXY</span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
-              Image to URL instantly. Upload once, share anywhere — powered by Vercel Blob
-              storage with edge-fast CDN caching.
+              Image to URL instantly. Upload once, share anywhere — powered by Wanz,
+              blob storage with edge-fast CDN caching.
             </p>
             <button
               type="button"

@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
 
     if (file.size > MAX_SIZE) {
       return NextResponse.json(
-        { error: "File terlalu besar. Maksimal 4.5 MB (limit free tier Vercel Blob)." },
+        { error: "File terlalu besar. Maksimal 4.5 MB (limit penyimpanan gratis)." },
         { status: 413 }
       );
     }
