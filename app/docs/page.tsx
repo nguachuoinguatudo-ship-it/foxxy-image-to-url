@@ -31,15 +31,15 @@ const ENDPOINTS = [
 const EMBEDS = [
   {
     lang: "markdown",
-    code: "![foxxy-image](https://namadomain.vercel.app/foxxy-kodeacak.png)",
+    code: "![foxxy-image](https://foxxy-free-imghosting.vercel.app/foxxy-kodeacak.png)",
   },
   {
     lang: "html",
-    code: '<img src="https://namadomain.vercel.app/foxxy-kodeacak.png" alt="foxxy" width="640" />',
+    code: '<img src="https://foxxy-free-imghosting.vercel.app/foxxy-kodeacak.png" alt="foxxy" width="640" />',
   },
   {
     lang: "curl",
-    code: 'curl -F "file=@gambar.png" https://namadomain.vercel.app/api/upload',
+    code: 'curl -F "file=@gambar.png" https://foxxy-free-imghosting.vercel.app/api/upload',
   },
   {
     lang: "fetch (js)",
@@ -106,7 +106,7 @@ export default function DocsPage() {
           <p className="mt-2 text-emerald-400">[ OK ] 0.42s • blob stored</p>
           <p className="mt-1 break-all text-slate-200">
             <span className="text-slate-500">→ </span>
-            https://namadomain.vercel.app/<span className="text-gradient font-bold">foxxy-kodeacak.png</span>
+            https://foxxy-free-imghosting.vercel.app/<span className="text-gradient font-bold">foxxy-kodeacak.png</span>
           </p>
           <div className="mt-4 grid gap-2 text-xs text-slate-400 sm:grid-cols-3">
             <p className="flex items-center gap-2"><Timer size={13} className="text-cyan-400" /> Cache: 1 tahun (immutable)</p>

@@ -1,6 +1,6 @@
 # FOXXY — Image to URL
 
-Upload gambar, dapatkan URL langsung — `https://namadomain.vercel.app/foxxy-kodeacak.png`.
+Upload gambar, dapatkan URL langsung — `https://foxxy-free-imghosting.vercel.app/foxxy-kodeacak.png`.
 Modern UI, full animasi, boot terminal, responsive mobile & desktop. Dibuat oleh **Wanz**.
 
 ## Fitur
@@ -10,7 +10,7 @@ Modern UI, full animasi, boot terminal, responsive mobile & desktop. Dibuat oleh
 - ✨ Full animasi: Framer Motion + Tailwind (aurora, twinkle stars, marquee, page transitions)
 - 🖼️ Halaman Gallery: list, copy link, buka tab baru, hapus, pagination
 - 📚 Halaman Docs API + halaman About developer
-- 🎯 URL langsung di domain sendiri: `namadomain.vercel.app/foxxy-xxxx.png` (proxy via catch-all route)
+- 🎯 URL langsung di domain sendiri: `foxxy-free-imghosting.vercel.app/foxxy-xxxx.png` (proxy via catch-all route)
 - 📦 Storage: Vercel Blob (gratis 5 GB) + CDN cache 1 tahun
 
 ## Pages
@@ -29,7 +29,7 @@ Modern UI, full animasi, boot terminal, responsive mobile & desktop. Dibuat oleh
 2. **Buat Blob Store** → dashboard Vercel → tab **Storage** → **Create Database** → pilih **Blob** → Create. Token `BLOB_READ_WRITE_TOKEN` otomatis ditambahkan ke environment variables project.
 3. **Deploy** → selesai. Setelah build, langsung bisa dipakai:
    - Upload dari halaman utama → copy URL
-   - Contoh hasil: `https://namadomain.vercel.app/foxxy-kodeacak.png`
+   - Contoh hasil: `https://foxxy-free-imghosting.vercel.app/foxxy-kodeacak.png`
 
 > Tanpa Blob Store, halaman upload/gallery akan menampilkan pesan error konfigurasi yang jelas.
 

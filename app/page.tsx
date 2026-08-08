@@ -138,7 +138,7 @@ export default function HomePage() {
           <p className="mt-1 text-emerald-400">[ OK ] uploaded in 0.42s</p>
           <p className="mt-1 text-slate-200">
             <span className="text-slate-500">→ </span>
-            https://namadomain.vercel.app/
+            https://foxxy-free-imghosting.vercel.app/
             <span className="text-gradient font-bold">foxxy-kodeacak.png</span>
           </p>
           <p className="animate-blink mt-1 inline-block text-cyan-400">▌</p>
