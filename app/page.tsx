@@ -12,6 +12,7 @@ import {
   ArrowDown,
   BookOpen,
   Copy,
+  Images,
   Share2,
 } from "lucide-react";
 import Uploader from "@/components/Uploader";
